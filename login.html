@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="a_bing">
+	<title>登录 - 安丽文</title>
+	<link rel="stylesheet" type="text/css" href="css/astyle.css">
+	<style type="text/css">body {background-color:#fff;}</style>
+</head>
+<body>
+	<header class="a-login-header"><a href="index.html"></a></header>
+	<main class="a-login-main">
+		<div class="w1200">
+			<p class="addh57"></p>
+			<div class="aLoginBox">	
+				<p class="aLginT clearfix"><span id="tooltips1"><i></i>扫描二维码，快速登录</span><a href="reg.html"><i></i>立即注册</a></p>
+				<form method="post" action="" class="aLoginForm" id="aLoginForm">
+					<label><input type="text" name="username" placeholder="手机号/用户名/邮箱"></label>
+					<p class="aYanp"></p>
+					<label><input type="password" name="password" placeholder="登录密码"></label>
+					<p class="aYanp"></p>
+					<p class="aRememberP clearfix"><label><input type="checkbox" checked="checked">&nbsp;记住用户名</label><a href="forget.php">忘记密码？</a></p>
+					<input type="submit" value="立即登录">
+				</form>
+				<p class="aLoginB"><span>第三方帐号登录：<br/></span><a href=""></a><a href=""></a><a href=""></a></p>
+			</div>
+		</div>
+	</main>
+	<!-- 弹出层 -->
+	<div style="display:none;">
+	    <p id="weixinBox" class="weixinBox"><img src="images/weixin.png"></p>
+	</div>
+	<footer class="afooter mt0">
+		<div class="w1200 clearfix">
+			<div class="afLeft"></div>
+			<div class="afRight">
+				<p>
+					<a href="index.html">网站首页</a> |
+					<a href="about.html">关于安丽文</a> |
+					<a href="news.html">新闻中心</a> |
+					<a href="object.html">服务项目</a> |
+					<a href="kefu.html">客户园地</a> |
+					<a href="ayi.html">阿姨园地</a> |
+					<a href="family.html">家庭百科</a> |
+					<a href="luntan.html">家政论坛</a> |
+					<a href="contact.html">联系我们</a>
+				</p>
+				<p>Copyright©2011-2014  苏州安丽文家政服务有限公司版权所有</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//weixin
+			$('#tooltips1').tooltip({
+                position: 'left',
+                //deltaY: -5,
+                content: $('#weixinBox'),
+                showEvent: 'mouseover',
+                onShow: function () {
+                    $(this).tooltip('tip').css({
+                        backgroundColor: '#fff',
+                        borderColor: '#DDDDDD'
+                    });
+                    var t = $(this);
+                    t.tooltip('tip').unbind().bind('mouseenter', function () {
+                        t.tooltip('show');
+                    }).bind('mouseleave', function () {
+                        t.tooltip('hide');
+                    });
+                }
+            });
+            //验证
+            var validator = $("#aLoginForm").validate({
+            	submitHandler: function(form) {
+            		//验证通过
+            		form.submit();
+            		//$(form).ajaxSubmit(); http://www.runoob.com/jquery/jquery-plugin-validate.html
+            	},
+    			rules: {
+    				username: {
+    					required: true,
+    					minlength: 6,
+    					maxlength: 16,
+    					/*remote: {
+    					    url: "check-user.php",     //后台处理程序
+    					    type: "post",               //数据发送方式
+    					    dataType: "json",           //接受数据格式   
+    					    data: {                     //要传递的数据
+    					        username: function() {
+    					            return $("input[name='username']").val();
+    					        }
+    					    },
+    					    dataFilter: function (data) {　//判断控制器返回的内容,只能返回true/false
+                                if (data == "true") {
+                                    return true;
+                                }
+                                else {
+                                    return false;
+                                }
+                            }
+						}*/
+    				},
+    				password: {
+    					required: true,
+    					minlength: 6,
+    					maxlength: 16
+    				}
+    			},
+    			messages: {
+    				username: {
+    					required: "请输入手机号/用户名/邮箱",
+    					minlength: "至少6个字符且最多16个字符",
+    					maxlength: "至少6个字符且最多16个字符"
+    					//remote:"check.php"	//远程验证
+    				},
+    				password: {
+    					required: "请输入密码",
+    					minlength: "至少6位且最多16位",
+    					maxlength: "至少6位且最多16位"
+    				}
+    			},
+    			errorPlacement: function(error, element) {
+    				if (element.is(":radio"))
+    					error.appendTo(element.parent().next().next());
+    				else if (element.is(":checkbox"))
+    					error.appendTo(element.next());
+    				else
+    					error.appendTo(element.parent().next());
+    			}
+    		});
+		});
+					
+	</script>
+</body>
+</html>

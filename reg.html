@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="a_bing">
+	<title>注册 - 安丽文</title>
+	<link rel="stylesheet" type="text/css" href="css/astyle.css">
+</head>
+<body>
+	<div class="utop">
+		<div class="w1200 clearfix">
+			<span></span>
+			<a href="login.html">登录</a>　|　<a href="reg.html">免费注册</a>　|　<a href="javascript:joinShou(window.location,document.title)">收藏</a>
+		</div>
+	</div>
+	<header class="a-login-header"><a href="index.html"></a></header>
+	<main class="a-reg-main">
+		<form method="post" action="" class="aRegForm" id="aRegForm">
+		<table class="aRegTable">
+			<tr>
+				<th>　<span>*</span>用户名：</th>
+				<td><input type="text" name="username" class="aRegInput"></td>
+			</tr>
+			<tr class="aRegEtr"><th></th><td><p class="aRegErrorp"></p></td></tr>
+			<tr>
+				<th><span>*</span>设置密码：</th>
+				<td><input type="password" id="password" name="password" class="aRegInput"></td>
+			</tr>
+			<tr class="aRegEtr"><th></th><td><p class="aRegErrorp"></p></td></tr>
+			<tr>
+				<th><span>*</span>确认密码：</th>
+				<td><input type="password" name="repwd" class="aRegInput"></td>
+			</tr>
+			<tr class="aRegEtr"><th></th><td><p class="aRegErrorp"></p></td></tr>
+			<tr>
+				<th><span>*</span>验证手机：</th>
+				<td><input type="text" name="phone" class="aRegInput"></td>
+			</tr>
+			<tr class="aRegEtr"><th></th><td><p class="aRegErrorp"></p></td></tr>
+			<tr>
+				<th><span>*</span>短信验证码：</th>
+				<td><input type="text" name="pcode" class="aRegInput2"><button class="getpcode" type="button">获取验证码</button></td>
+			</tr>
+			<tr class="aRegEtr"><th></th><td><p class="aRegErrorp"></p></td></tr>
+			<tr>
+				<th>　<span>*</span>验证码：</th>
+				<td><input type="text" name="ycode" class="aRegInput2"><img src="images/a_regimg1.png" title="点击切换"></td>
+			</tr>
+			<tr class="aRegEtr"><th></th><td><p class="aRegErrorp"></p></td></tr>
+			<tr>
+				<th></th>
+				<td><input type="checkbox" name="readfile" checked="checked">&nbsp;我已阅读并同意<a href="" class="aColorCase1">《安丽文用户协议》</a></td></td>
+			</tr>
+			<tr class="aRegEtr"><th></th><td><p class="aRegErrorp"></p></td></tr>
+			<tr>
+				<th></th>
+				<td><input type="submit" value="立即注册"></td>
+			</tr>
+		</table>
+		</form>
+	</main>
+	<!-- 弹出层 -->
+	<div style="display:none;">
+	    <p id="weixinBox" class="weixinBox"><img src="images/weixin.png"></p>
+	</div>
+	<footer class="afooter">
+		<div class="w1200 clearfix">
+			<div class="afLeft"></div>
+			<div class="afRight">
+				<p>
+					<a href="index.html">网站首页</a> |
+					<a href="about.html">关于安丽文</a> |
+					<a href="news.html">新闻中心</a> |
+					<a href="object.html">服务项目</a> |
+					<a href="kefu.html">客户园地</a> |
+					<a href="ayi.html">阿姨园地</a> |
+					<a href="family.html">家庭百科</a> |
+					<a href="luntan.html">家政论坛</a> |
+					<a href="contact.html">联系我们</a>
+				</p>
+				<p>Copyright©2011-2014  苏州安丽文家政服务有限公司版权所有</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/ascript.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//获取短信验证码
+			var abvar = {};
+			abvar.duanxintime = 90;
+			abvar.settimeer = null;
+
+			$('.getpcode').click(function(){
+				abvar.settimeer = setInterval(daoTime,1000);
+			});
+			function daoTime(){
+				var str;
+				abvar.duanxintime--;
+				if(abvar.duanxintime > 0){
+					str = abvar.duanxintime + 's后重新发送';
+					$('.getpcode').attr('disabled','disabled');
+					$('.getpcode').css('cursor','default');
+				}else{
+					str = '获取短信校验码';
+					abvar.duanxintime = 10;
+					$('.getpcode').removeAttr('disabled');
+					$('.getpcode').css('cursor','pointer');
+					clearInterval(abvar.settimeer);
+				}
+				$('.getpcode').html(str);
+			}
+			// 手机号码验证
+			jQuery.validator.addMethod("isMobile", function(value, element) {
+			    var length = value.length;
+			    var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+			    return this.optional(element) || (length == 11 && mobile.test(value));
+			}, "请正确填写您的手机号码");
+            //验证
+            var validator = $("#aRegForm").validate({
+            	submitHandler: function(form) {
+            		//验证通过
+            		form.submit();
+            	},
+    			rules: {
+    				username: {
+    					required: true,
+    					minlength: 4,
+    					maxlength: 16
+    				},
+    				password: {
+    					required: true,
+    					minlength: 6,
+    					maxlength: 16
+    				},
+    				repwd: {
+    					required: true,
+    					minlength: 6,
+    					maxlength: 16,
+						equalTo: "#password"
+    				},
+    				phone: {
+    					required: true,
+    					isMobile: true
+    				},
+    				pcode: {
+    					required: true,
+    					minlength: 6,
+    					maxlength: 6
+    				},
+    				ycode: {
+    					required: true,
+    					minlength: 4,
+    					maxlength: 5
+    				},
+    				readfile: {required: true}
+    			},
+    			messages: {
+    				username: {
+    					required: "请输入用户名/昵称",
+    					minlength: "至小4个字符且最多16个字符",
+    					maxlength: "至少4个字符且最多16个字符"
+    				},
+    				password: {
+    					required: "请输入密码",
+    					minlength: "至少6位且最多16位",
+    					maxlength: "至少6位且最多16位"
+    				},
+    				repwd: {
+    					required: "请输入密码",
+    					minlength: "至少6位且最多16位",
+    					maxlength: "至少6位且最多16位",
+    					equalTo: "两次密码输入不一样"
+    				},
+    				phone: {
+    					required: "请输入手机号码",
+    					isMobile: "请输入正确的手机号码"
+    				},
+    				pcode: {
+    					required: "请输入短信验证码",
+    					minlength: "6位短信验证码",
+    					maxlength: "6位短信验证码"
+    				},
+    				ycode: {
+    					required: "请输入验证码",
+    					minlength: "4位验证码",
+    					maxlength: "4位验证码"
+    				},
+    				readfile: {
+    					required: "请阅读并同意我们的协议"
+    				}
+    			},
+    			errorPlacement: function(error, element) {
+    				error.appendTo(element.parent().parent().next().find('.aRegErrorp'));
+    			}
+    		});
+		});
+					
+	</script>
+</body>
+</html>

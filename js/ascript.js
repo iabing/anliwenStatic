@@ -6,6 +6,26 @@
  * @note   安丽文-版权所有
  */
 
+$(function(){
+  //search type
+  $('#typeP').click(function(){
+    var oUl = $('#typeUl');
+    var oIcon = $('#selectIcon');
+    if(oUl.css('display') == 'none'){
+      oUl.show();
+      oIcon.attr('class','a-icon17');
+    }else{
+      oUl.hide();
+      oIcon.attr('class','a-icon11');
+    }
+  });
+  $('#typeUl li').click(function(){
+    var oIcon = $('#selectIcon');
+    oIcon.attr('class','a-icon11');
+    $('#searchType').val($(this).html());
+    $('#typeUl').hide();
+  });
+});
 
 //加入收藏
 function joinShou(url,title){

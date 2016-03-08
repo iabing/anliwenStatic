@@ -45,6 +45,180 @@
         <div class="a-posBox">
             <p class="a-posP"><i></i><a href="index.html">网站首页</a> &gt; <a href="">找工作</a></p>
         </div>
+        <p class="a-adp"><a href=""><img src="images/a_banner01.png"></a></p>
+        <div class="a-fwBox">
+            <form class="afwForm" method="post" action="">
+                <p class="afwpcase1">服务内容：
+                    <label><input type="checkbox" name="servercon" value="1">母婴护理</label>
+                    <label><input type="checkbox" name="servercon" value="2">催乳服务</label>
+                    <label><input type="checkbox" name="servercon" value="3">育婴服务</label>
+                    <label><input type="checkbox" name="servercon" value="4">育婴兼家务</label>
+                    <label><input type="checkbox" name="servercon" value="5">料理家务</label>
+                    <label><input type="checkbox" name="servercon" value="6">家庭寺</label>
+                    <label><input type="checkbox" name="servercon" value="7">养老护理</label>
+                    <label><input type="checkbox" name="servercon" value="8">少儿家教</label>
+                    <label><input type="checkbox" name="servercon" value="9">病患护理</label>
+                    <label><input type="checkbox" name="servercon" value="10">母婴护理</label>
+                </p>
+                <p class="afwpcase2"><span>服务日期：<input type="text" name="startTime" onClick="WdatePicker({maxDate:'%y-%M-%d'})" class="Wdate"> 到 <input type="text" name="endTime" onClick="WdatePicker({maxDate:'%y-%M-%d'})" class="Wdate"><span class="ml20">服务周期：
+                <select name="week">
+                    <option value="1">周一二三四五六日</option>
+                    <option value="2">周一二三四五六</option>
+                    <option value="3">周一二三四五</option>
+                    <option value="4">周一二三四</option>
+                    <option value="5">周一二三</option>
+                    <option value="6">周一二</option>
+                    <option value="7">周一</option>
+                </select></span><span class="ml20">时间模式：<select name="timeType">
+                    <option value="1">白天班</option>
+                    <option value="2">晚上班</option>
+                </select></span><span class="ml20">服务时段：<select name="stimePart">
+                    <option value="1">08:30</option>
+                    <option value="1">08:10</option>
+                    <option value="1">08:00</option>
+                </select> 到 <select name="etimePart">
+                    <option value="1">17:30</option>
+                    <option value="1">17:10</option>
+                    <option value="1">17:00</option>
+                </select></span></p>
+                <p class="afwpcase3">服务地址：<select name="address-a">
+                    <option value="1">张家界</option>
+                    <option value="1">张家界2</option>
+                    <option value="1">张家界3</option>
+                </select><select name="address-b">
+                    <option value="2">港口区</option>
+                    <option value="2">港口区2</option>
+                    <option value="2">港口区3</option>
+                </select><input type="text" name="address-c" placeholder="详细地址"><span class="ml20">期待报酬：<input type="text" name="salary">元/月</span></p>
+                <p class="afwpcase4">　　姓名：<input type="text" name="username" class="afwdinput"><span class="ml20">性别：<label><input type="radio" name="gender" vlaue="0" checked="checked">女</label><label><input type="radio" name="gender" value="1">男</label></span><span class="ml20">出生日期：<input type="text" name="birthday" onClick="WdatePicker({maxDate:'%y-%M-%d'})" class="Wdate"></span><span class="ml20">民族：<input type="text" name="minzu" class="afwdinput"></span><span class="ml20">学历：
+                <select name="xueli">
+                    <option value="1">大学</option>
+                    <option value="2">高中</option>
+                    <option value="3">初中</option>
+                    <option value="4">小学</option>
+                </select></span><span class="ml20">宗教：<input type="text" name="zongjiao" class="afwdinput"></span></p>
+                <p class="afwpcase5">　　身高：<input type="text" name="height">cm<span class="ml20">体重：<input type="text" name="weight">kg</span><span class="ml20">户籍地址：<select name="location_p" id="location_p"></select><select name="location_c" id="location_c"></select><select name="location_a" id="location_a"></select><input type="text" name="detailAddress" id="afwDaddress" placeholder="请输入详细地址"></span><span class="ml20">掌握语言：<input type="text" name="language"></span></p>
+
+                <p class="afwpcase6">　手机号：<input type="text" name="tellphone"><span class="ml30">微信：<input type="text" name="weixin"></span><span class="ml30">QQ：<input type="text" name="qq"></span><span class="ml30">身份证号：<input type="text" name="identifer"></span></p>
+                <p class="afwpcase7">个人简历：<textarea placeholder="请填写工作经历"></textarea></p>
+                <p class="afwpcase8">客户编号：<input type="text" name="bianhao" value="007"></p>
+                <p class="afwpcase9"><input type="submit" value="提交申请"></p>
+            </form>
+            <p class="afwcP">您可以从下列客户中备选三户家庭预约确认，并提交申请！</p>
+            <div class="afwBbox clearfix">
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+                <div class="afwBCase">
+                    <p class="afwBcaseP"><a href="">预约</a><a href="">收藏</a></p>
+                    <div class="afwBcaseDiv">
+                        <p><strong>殷小姐</strong>需要育婴兼家务</p>
+                        <p>男宝宝8个月</p>
+                        <p>白天班 08：00 - 17：00</p>
+                        <p>苏州朗悦湾</p>
+                        <p>预算报酬5000元/月</p>
+                    </div>
+                    <p class="afwBcaseP2"><span>编号：10800</span><a href="fw-detailed.html"><i></i>查看详情</a></p>
+                </div>
+            </div>
+            <p class="a-paging"><a href="">上一页</a><a href="">1</a><a href="">2</a><span>3</span><a href="">4</a><a href="">5</a><a href="">6</a><a href="">下一页</a><a href="">尾页</a></p>
+        </div>
     </main>
     <footer class="afooter">
         <div class="w1200 clearfix">
@@ -66,9 +240,11 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/region_select.js"></script>
     <script type="text/javascript" src="js/ascript.js"></script>
     <script type="text/javascript">
-
+        new PCAS('location_p', 'location_c', 'location_a', '云南省', '昆明市', '西山区');
     </script>
 </body>
 </html>

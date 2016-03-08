@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="a_bing">
+    <title>求职问答-入职申请 - 安丽文</title>
+    <link rel="stylesheet" type="text/css" href="css/astyle.css">
+    <style type="text/css">body {background: #FBF0FE;}</style>
+</head>
+<body>
+    <div class="utop">
+        <div class="w1200 clearfix">
+            <span></span>
+            <a href="login.html">登录</a>　|　<a href="reg.html">免费注册</a>　|　<a href="javascript:joinShou(window.location,document.title)">收藏</a>
+        </div>
+    </div>
+    <header class="a-login-header a-pd20">
+        <div class="w1120 clearfix">
+            <div class="aheaderLeft"><a href="index.html"></a></div>
+            <div class="aheaderForm">
+                <form action="" method="post" class="asearchForm clearfix">
+                    <div class="asearchTypeDiv">
+                        <p class="atypeP" id="typeP"><input type="text" name="type" value="日常生活" id="asearchType" readonly="readonly" /><span class="a-icon11" id="selectIcon"></span></p>
+                        <ul class="atypeUl" id="typeUl">
+                            <li>日常生活</li>
+                            <li>日常生活</li>
+                            <li>日常生活</li>
+                            <li>日常生活</li>
+                        </ul>
+                    </div>
+                    <input type="text" name="keywords" value="" placeholder="请输入关键字" class="akeywords" />
+                    <input type="submit" value="搜 索" class="asearchSubmit" />
+                </form>
+            </div>
+            <div class="aheaderhLine"></div>
+        </div>
+    </header>
+    <div class="a-navBox">
+        <nav class="w1200">
+            <a href="" id="acurNav">网站首页</a><a href="">关于安丽文</a><a href="">新闻中心</a><a href="">服务项目</a><a href="">客户园地</a><a href="">阿姨园地</a><a href="">家庭百科</a><a href="">家政论坛</a><a href="">联系我们</a>
+        </nav>
+    </div>
+    <main class="w1200 mt20">
+        <div class="a-posBox">
+            <p class="a-posP"><i></i><a href="index.html">网站首页</a> &gt; <a href="">找工作</a></p>
+        </div>
+        <p class="a-adp"><a href=""><img src="images/a_banner01.png"></a></p>
+        <div class="a-fwBox">
+            <form class="arzsqFrom" method="post" action="">
+                <table class="arzsqTable">
+                    <tr>
+                        <td>姓名：<input type="text" name="username">
+                        <span>性别：<label><input type="radio" name="gender" value="1">男</label>&nbsp;&nbsp;
+                        <label><input type="radio" name="gender" value="2" checked="checked">女</label></span>
+                        <span>出生日期：<input type="text" name="birthday"  onClick="WdatePicker({maxDate:'%y-%M-%d'})" class="Wdate">
+                        <span>民族：<input type="text" name="minzu"></span></span></td>
+                        <td rowspan="6" id="arzsqPhoto"><input type="file" name="photo" value="头像上传"></td>
+                    </tr>
+                    <tr>
+                        <td>宗教：<input type="text" name="zongjiao">
+                        <span>学历：<select>
+                            <option value="1">大学</option>
+                            <option value="2">高中</option>
+                            <option value="3">初中</option>
+                            <option value="4">小学</option>
+                        </select></span>
+                        <span>身份证号：<input type="text" name="identifer">
+                        </span></td>
+                    </tr>
+                    <tr>
+                        <td>户籍：<select name="location_p" id="location_p"></select><select name="location_c" id="location_c"></select><select name="location_a" id="location_a"></select><input type="text" name="detailAddress" placeholder="详细地址(不必重复省市区)" class="arzsqInput"></td>
+                    </tr>
+                    <tr>
+                        <td>身高：<input type="text" name="height">cm
+                        <span>体重：<input type="text" name="weight">kg</span>
+                        <span>职业意向：<input type="text" name="target" class="arzsqInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td>掌握语言：<input type="text" name="language" class="arzsqInput">
+                        <span>兴趣爱好：<input type="text" name="like" class="arzsqInput"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号码：<input type="text" name="tellphone" class="arzsqInput">
+                        <span>微信/QQ：<input type="text" name="weixin" class="arzsqInput"></span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="arzsqProfile">
+                    <h2 class="arzsqpH2 clearfix"><span><input type="file" name="image"></span><span><i></i>图片</span><span></span><span><i>
+                    </i>找资料</span></h2>
+                    <p class="arzsqpP"><textarea name="profile"></textarea></p>
+                    <p class="arzsqBtn"><input type="submit" value="提交申请"></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="afooter">
+        <div class="w1200 clearfix">
+            <div class="afLeft"></div>
+            <div class="afRight">
+                <p>
+                    <a href="index.html">网站首页</a> |
+                    <a href="about.html">关于安丽文</a> |
+                    <a href="news.html">新闻中心</a> |
+                    <a href="object.html">服务项目</a> |
+                    <a href="kefu.html">客户园地</a> |
+                    <a href="ayi.html">阿姨园地</a> |
+                    <a href="family.html">家庭百科</a> |
+                    <a href="luntan.html">家政论坛</a> |
+                    <a href="contact.html">联系我们</a>
+                </p>
+                <p>Copyright©2011-2014  苏州安丽文家政服务有限公司版权所有</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/region_select.js"></script>
+    <script type="text/javascript" src="js/ascript.js"></script>
+    <script type="text/javascript">
+        new PCAS('location_p', 'location_c', 'location_a', '云南省', '昆明市', '西山区');
+    </script>
+</body>
+</html>

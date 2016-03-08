@@ -1,0 +1,11 @@
+/*** file list ***/
+find-word.html		找工作
+fw-detailed.html	找工作详情页
+hezuo.html		合作
+login.hml		登录
+reg.html		注册
+qzwd-jlzy.html		求职问答
+	qzwd-lxalw.html
+	qzwd-rzsq.html
+	rzwd-szsc.html
+sqshg.html		社区生活馆
